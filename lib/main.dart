@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:myapp/features/home/presentation/pages/home_page.dart';
 import 'package:myapp/features/notification/presentation/pages/notification_list_page.dart';
 import 'package:myapp/features/parcel/presentation/pages/parcel_list_page.dart';
-import 'package:myapp/features/parcel/presentation/pages/parcel_detail_page.dart'; // <--- ADDED
+import 'package:myapp/features/parcel/presentation/pages/parcel_detail_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +31,7 @@ final _router = GoRouter(
       path: '/parcels',
       builder: (context, state) => const ParcelListPage(),
     ),
-    GoRoute( // <--- ADDED
+    GoRoute(
       path: '/parcel_detail/:recordId',
       builder: (context, state) {
         final recordId = state.pathParameters['recordId']!;

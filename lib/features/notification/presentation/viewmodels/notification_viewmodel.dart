@@ -29,7 +29,7 @@ extension NotificationMapper on Notification {
       body: notification.body,
       date: DateFormat('MMM d, yyyy HH:mm').format(DateTime.parse(data.dateTime)),
       isUnread: data.isUnread,
-      menu: data.menu,
+      menu: data.menu ?? '', // <-- MODIFIED THIS LINE
     );
   }
 }
